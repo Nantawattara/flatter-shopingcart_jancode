@@ -73,6 +73,11 @@ class CartScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: Provider.of<CartProvider>(context, listen: false).clear,
+        tooltip: 'Clear Cart',
+        child: const Icon(Icons.delete),
+      ),
     );
   }
 }

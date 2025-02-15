@@ -62,7 +62,9 @@ class CartProvider with ChangeNotifier {
   void clear() {
     if (_items.isNotEmpty) {
       _items.clear();
-      notifyListeners();
+    } else {
+      return;
     }
+    notifyListeners();
   }
 }
